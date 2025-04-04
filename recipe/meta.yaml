@@ -1,5 +1,5 @@
 {% set name = "mcstas-readout-master" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/g5t/mcstas-readout-master/archive/v{{ version }}.tar.gz
-  sha256: 64dea61e66f2fa71efa4fb32caeb81f6640028bc26600510aceb861352e81572
+  sha256: 1bf02aeca44813d89c902ef6fd34b923157d52ae077f97f51d3d107eac8476d0
 
 build:
   number: 0
