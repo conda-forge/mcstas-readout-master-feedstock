@@ -1,13 +1,13 @@
 {% set name = "mcstas-readout-master" %}
-{% set version = "0.3.3" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/g5t/mcstas-readout-master/archive/v{{ version }}.tar.gz
-  sha256: 02d566192b12df87dc597739262679626af19577e98f9016df4dc197cc0f9f82
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8fd16c951ee3d10ceeaf1f84640b995b2fff62dd2b648f527c770309094f0b9e
 
 build:
   number: 0
@@ -26,6 +26,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - highfive
+    - nlohmann_json
     - catch2
   run:
     - hdf5
@@ -34,7 +35,9 @@ test:
   commands:
     - readout-config --help
     - readout-config --version
+    - readout-config --show compdir
     - readout-replay --help
+    - readout-combine --help
     - test -f ${PREFIX}/include/Readout.h  # [not win]
     - if not exist %PREFIX%\\include\\Readout.h exit 1  # [win]
     - cmake-package-check Readout --targets Readout
@@ -44,7 +47,7 @@ test:
     - {{ compiler('cxx') }}
 
 about:
-  home: https://github.com/g5t/mcstas-readout-master
+  home: https://github.com/mcdotstar/mcstas-readout-master
   summary: 'McStas Readout Master for ESS detectors'
   description: |
     Provides McStas components to mimic different detector-types supported
@@ -54,8 +57,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  doc_url: https://github.com/g5t/mcstas-readout-master
-  dev_url: https://github.com/g5t/mcstas-readout-master
+  doc_url: https://mcdotstar.github.io/mcstas-readout-master
+  dev_url: https://github.com/mcdotstar/mcstas-readout-master
 
 extra:
   recipe-maintainers:
