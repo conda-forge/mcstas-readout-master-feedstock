@@ -5,7 +5,7 @@
 set -eux
 mkdir -p build
 
-test -f "${SRC_DIR}/lib/Readout.h"
+test -f "${SRC_DIR}/readout_core/include/Readout.h"
 
 cmake \
 	-B ./build \
