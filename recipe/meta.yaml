@@ -1,5 +1,5 @@
 {% set name = "mcstas-readout-master" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8fd16c951ee3d10ceeaf1f84640b995b2fff62dd2b648f527c770309094f0b9e
+  sha256: 28f11e1216731e59a5bb5489682653c263e1abd784b8a739f1177785a38124e7
 
 build:
   number: 0
