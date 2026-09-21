@@ -1,13 +1,13 @@
 {% set name = "mcstas-readout-master" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8fd16c951ee3d10ceeaf1f84640b995b2fff62dd2b648f527c770309094f0b9e
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: ad9b53e1398fcd1ddcd23cd960d84ff915c8168f538593e43afb61e8db24cb22
 
 build:
   number: 0
