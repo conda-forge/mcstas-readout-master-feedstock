@@ -1,5 +1,5 @@
 {% set name = "mcstas-readout-master" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9b7a8563783620ddd18ea082b36cebe644288e7c2c8f002adbd6046cb568dcb2
+  sha256: 0ee1ce3c2737cc9945e1d245ae536b4ec3edae2c88ca68aec845d0d5029f6974
 
 build:
   number: 0
